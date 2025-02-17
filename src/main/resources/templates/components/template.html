@@ -147,7 +147,7 @@
                                 <td th:text="${producto.precio}"></td>
                                 <td th:text="${producto.stock}"></td>
                                 <td>
-                                    <a th:href="@{/administracion/editar/{id}(id=${producto.id})}"
+                                    <a th:href="@{/administracion/editar-producto/{id}(id=${producto.id})}"
                                         class="btn btn-yellow btn-sm">Editar</a>
                                     <form th:action="@{/administracion/eliminar/{id}(id=${producto.id})}" method="post">
                                         <button type="submit" class="btn btn-dark btn-sm">Eliminar</button>
@@ -164,7 +164,7 @@
     <th:block th:fragment="formulario_productos">
         <div class="container">
             <div class="col-lg-8 col-md-12 col-sm-12 bg-yellow p-4 rounded mx-auto py-5">
-                <form th:action="@{/productos/procesar}" th:object="${producto}" method="post">
+                <form th:action="@{/productos/guardar}" th:object="${producto}" method="post">
                     <input type="hidden" th:field="*{id}">
                     <div class="mb-3">
                         <label for="nombreProducto" class="form-label text-light">Nombre del Producto:</label>
@@ -180,16 +180,47 @@
                     </div>
                     <div class="mb-3">
                         <label for="stock" class="form-label text-light">Stock:</label>
-                        <input type="number" class="form-control border-yellow" id="stock" th:field="*{stock}" required>
+                        <input type="number" class="form-control border-yellow" id="stock" th:field="*{stock}" step="0.01" required>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-warning mt-3">Guardar Producto</button>
                     </div>
-                    <a th:href="@{/productos}">Regresar</a>
+                    <a th:href="@{/administracion}">Regresar</a>
                 </form>
             </div>
         </div>
     </th:block>
+
+    <th:block th:fragment="formulario_editar_productos">
+        <div class="container">
+            <div class="col-lg-8 col-md-12 col-sm-12 bg-yellow p-4 rounded mx-auto py-5">
+                <form th:action="@{/productos/editar}" th:object="${producto}" method="post">
+                    <input type="hidden" th:field="*{id}">
+                    <div class="mb-3">
+                        <label for="nombreProducto" class="form-label text-light">Nombre del Producto:</label>
+                        <input type="text" class="form-control border-yellow" id="nombreProducto" th:field="*{nombre}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="urlImagen" class="form-label text-light">URL de la Imagen:</label>
+                        <input type="text" class="form-control border-yellow" id="urlImagen" th:field="*{imagen}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label text-light">Precio:</label>
+                        <input type="number" class="form-control border-yellow" id="precio" th:field="*{precio}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock" class="form-label text-light">Stock:</label>
+                        <input type="number" class="form-control border-yellow" id="stock" th:field="*{stock}" step="0.01" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning mt-3">Editar Producto</button>
+                    </div>
+                    <a th:href="@{/administracion}">Regresar</a>
+                </form>
+            </div>
+        </div>
+    </th:block>
+
 
     <!-- FOOTER -->
     <footer class="text-light py-3 mt-auto" style="background-color: #000000;">

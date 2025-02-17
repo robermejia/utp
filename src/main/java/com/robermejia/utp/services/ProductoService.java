@@ -28,6 +28,15 @@ public class ProductoService {
         }
     }
 
+    public Producto editarProducto(Producto producto) {
+        try {
+            return productoRepository.save(producto);
+        } catch (DataAccessException e) {
+            System.err.println("Error al editar el producto: " + e.getMessage());
+            return null; // o lanzar una excepción
+        }
+    }
+
     public Optional<Producto> getProductoById(Integer id) {
         return productoRepository.findById(id);
     }

@@ -17,6 +17,17 @@
             <p class="lead">Añade un nuevo producto.</p>
         </section>
         
+        <div th:if="${mensajeError != null}" class="alert alert-danger" role="alert">
+            <p th:text="${mensajeError}"></p>
+        </div>
+
+        <div th:if="${fieldErrors != null}" class="alert alert-danger" role="alert">
+            <th:block th:each="error : ${fieldErrors}">
+                <p th:text="${error.getField()} + ': ' + ${error.getDefaultMessage()}"></p>
+            </th:block>
+        </div>
+
+
         <!-- FORMULARIO PRODUCTOS -->
         <th:block th:replace="~{components/template :: formulario_productos}"></th:block>  
         

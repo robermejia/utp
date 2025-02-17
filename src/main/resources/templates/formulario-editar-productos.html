@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 
-<head th:replace="~{components/template :: cabecera('administración')}">
+<head th:replace="~{components/template :: cabecera('Acerca')}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adminitración</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -13,17 +13,23 @@
     
     <main class="container mt-5">
         <section class="py-5 text-center">
-            <h1>Panel de administración de productos</h1>
-            <p class="lead">Lee, edita, Actualiza y elimina productos.</p>
-            <a class="btn btn-success" href="@{/administracion/nuevo-producto}">Nuevo</a>
+            <h1>Formulario de Nuevo Producto</h1>
+            <p class="lead">Añade un nuevo producto.</p>
         </section>
         
-        
-        <!-- AÑADIR PRODUCTO-->
-        
+        <div th:if="${mensajeError != null}" class="alert alert-danger" role="alert">
+            <p th:text="${mensajeError}"></p>
+        </div>
 
-        <!-- ADMINISTRACIÓN -->
-        <th:block th:replace="~{components/template :: administracion}"></th:block>  
+        <div th:if="${fieldErrors != null}" class="alert alert-danger" role="alert">
+            <th:block th:each="error : ${fieldErrors}">
+                <p th:text="${error.getField()} + ': ' + ${error.getDefaultMessage()}"></p>
+            </th:block>
+        </div>
+
+
+        <!-- FORMULARIO PRODUCTOS -->
+        <th:block th:replace="~{components/template :: formulario_editar_productos}"></th:block>  
         
         <section class="py-4">
             <!-- Agrega más secciones según sea necesario -->
