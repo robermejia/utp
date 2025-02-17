@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Acerca')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container mt-5">
+        <section class="py-5 text-center">
+            <h1>Acerca de Nosotros</h1>
+            <p class="lead">Descubre quiénes somos y qué hacemos.</p>
+        </section>
+        
+        <section class="py-4 px-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen de equipo" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>Nuestra Historia</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nulla voluptates unde, repellat odit perspiciatis accusantium aperiam totam, sequi repudiandae pariatur impedit suscipit inventore tenetur, rem sed ratione praesentium doloribus. Aliquid tenetur, praesentium perspiciatis, modi repellendus accusantium tempore sint inventore enim ad error soluta labore excepturi ducimus, eveniet consequuntur officia expedita! Tenetur corrupti sunt aspernatur rerum adipisci dolorum, rem molestias et dolor amet repudiandae magnam, neque ut mollitia quia, facere quisquam aliquid consectetur. Temporibus, labore! Necessitatibus commodi consequuntur quia consectetur beatae ab sapiente asperiores esse velit qui, recusandae rerum ad fugit cum magnam cumque nesciunt, porro fuga! Repellat, est quia!.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-4 px-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Misión</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dicta non, voluptates nemo libero tempore voluptas ullam, ea magnam necessitatibus blanditiis mollitia sapiente? Unde harum cum odit fugiat dolorum ad voluptas saepe hic culpa nostrum magni illum impedit recusandae illo, blanditiis esse adipisci veritatis eius vitae labore quo. Sunt hic id voluptatum ullam tempore facilis aliquam eaque, modi est aspernatur totam corrupti ea consequuntur animi facere aperiam labore! Enim dolor voluptates aspernatur tempore ducimus non ad in assumenda quasi corrupti!</p>
+                    <img src="https://images.pexels.com/photos/3184613/pexels-photo-3184613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen relacionada con la misión" class="img-fluid rounded mb-3">
+                </div>
+                <div class="col-md-6">
+                    <h2>Visión</h2>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dicta non, voluptates nemo libero tempore voluptas ullam, ea magnam necessitatibus blanditiis mollitia sapiente? Unde harum cum odit fugiat dolorum ad voluptas saepe hic culpa nostrum magni illum impedit recusandae illo, blanditiis esse adipisci veritatis eius vitae labore quo. Sunt hic id voluptatum ullam tempore facilis aliquam eaque, modi est aspernatur totam corrupti ea consequuntur animi facere aperiam labore! Enim dolor voluptates aspernatur tempore ducimus non ad in assumenda quasi corrupti!</p>
+                    <img src="https://images.pexels.com/photos/3184434/pexels-photo-3184434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen relacionada con la visión" class="img-fluid rounded mb-3">
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="py-4">
+            <!-- Agrega más secciones según sea necesario -->
+        </section>
+        
+        <!-- LOGIN MODAL -->
+        <th:block th:replace="~{components/template :: modal1}"></th:block>  
+        
+    </main>
+    
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

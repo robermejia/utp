@@ -1,0 +1,16 @@
+
+.table-yellow {
+    background-color: #FFFF00; /* Amarillo */
+    color: #000; /* Negro */
+}
+.table-yellow th, .table-yellow td {
+    border: 1px solid #000; /* Bordes negros */
+}
+.table-yellow th {
+    background-color: #FFD700; /* Amarillo más oscuro para encabezados */
+}
+.btn-yellow {
+    background-color: #FFD700;
+    color: #000;
+    border: 1px solid #000;
+}

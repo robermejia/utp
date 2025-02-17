@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Productos')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container col-lg-12 my-5 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="my-3 text-center alert alert-danger">Error</h1>  <!-- Añadido para mostrar un ejemplo -->
+        <img class="img-fluid mx-auto my-3" src="https://png.pngtree.com/png-vector/20210221/ourlarge/pngtree-error-404-not-found-glitch-effect-png-image_2928215.jpg" alt="Error 404">
+        <p class="text-center alert alert-danger">No se encontró la página.</p> <!-- Añadido para mostrar un ejemplo -->
+    </main>
+    
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

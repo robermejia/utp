@@ -1,0 +1,10 @@
+.bg-yellow {
+    background-color: #000000; /* Amarillo */
+    color: #ffffff; /* Negro */
+}
+.text-yellow {
+    color: white;
+}
+.border-yellow {
+    border: 1px solid #000000;
+}

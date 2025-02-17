@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Contacto')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Contacto</h1>
+        <div class="row text-start mx-auto justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-4 mt-2">
+                <h3><i class="bi bi-telephone-fill" style="margin-bottom: 10px;"></i> Información de
+                    Contacto</h3>
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="mb-3">
+                            <i class="bi bi-bag"></i> <strong>Ventas:</strong><br>
+                            994006133 – 991858471
+                        </p>
+                        <p class="mb-3">
+                            <i class="bi bi-envelope"></i> <strong>Email:</strong><br>
+                            <a class="tema" style="color: black;"  href="mailto:ventas@utpperu.com">ventas@utpperu.com</a>
+                        </p>
+                        <p class="mb-3">
+                            <i class="bi bi-geo-alt"></i> <strong>Dirección:</strong><br>
+                            Av. Garcilaso de la Vega 1348, Lima 15001
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-clock"></i> <strong>Horario:</strong><br>
+                            Lunes a sábado de 10:00 AM a 7:30 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-8 col- mb-4">
+                <h3><i class="bi bi-geo-alt-fill"></i> Ubicación</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.495684339141!2d-77.03785232516098!3d-12.067202366995468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cfbac8d3e3b5%3A0x85034c02e6460a65!2sAv.%20Garcilaso%20de%20la%20Vega%201348%2C%20Lima%2015001!5e0!3m2!1ses-419!2spe!4v1615999942137!5m2!1ses-419!2spe"
+                    allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row text-start mt-5">
+            <div class="col-12 col-lg-8 col-md-12 mx-auto">
+                <h3><i class="bi bi-pencil-square"></i> Envíanos un mensaje</h3>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="first-name" class="form-label">
+                            <i class="bi bi-person-fill"></i> Nombre</label>
+                            <input type="text" class="form-control" id="first-name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="last-name" class="form-label">
+                                <i class="bi bi-person-fill"></i> Apellido</label>
+                                <input type="text" class="form-control" id="last-name" placeholder="Tu apellido" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">
+                                    <i class="bi bi-envelope-fill"></i> Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" placeholder="correo@gmail.com" required>
+                                </div>
+                                <div class="col-md-6">
+                        <label for="phone" class="form-label">
+                            <i class="bi bi-telephone-fill"></i> Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="+51 123 456 789" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">
+                            <i class="bi bi-chat-dots-fill"></i> Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje aquí"
+                            required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn botonTema2 btn-dark">
+                                <i class="bi bi-send-fill"></i> Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <!-- MOGIN MODAL -->
+        <th:block th:replace="~{components/template :: modal1}"></th:block>
+        
+    </main>
+    
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

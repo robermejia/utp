@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Servicios')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Nuestros Servicios</h1>
+        <p class="text-center mb-4">En UTP, nos especializamos en la venta de equipos tecnológicos de alta calidad para
+            satisfacer tus necesidades.</p>
+            
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 my-5">
+                <div class="col-md-4 mb-5">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="tema bi bi-laptop fs-1 text-dark" style="height: 100px;"></i>
+                            <h5 class="card-title mt-3">Venta de Laptops</h5>
+                        <p class="card-text">Venta de Laptops</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates
+                                laborum quasi doloribus iure, non assumenda maxime consequuntur error explicabo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="tema bi bi-phone fs-1 text-dark" style="height: 100px;"></i>
+                                <h5 class="card-title mt-3">Smartphones</h5>
+                        <p class="card-text">Venta de Laptops</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates
+                                laborum quasi doloribus iure, non assumenda maxime consequuntur error explicabo!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="tema bi bi-headphones fs-1 text-dark" style="height: 100px;"></i>
+                        <h5 class="card-title mt-3">Accesorios</h5>
+                        <p class="card-text">Venta de Laptops</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates
+                                laborum quasi doloribus iure, non assumenda maxime consequuntur error explicabo!</p>
+                            </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="tema bi bi-camera-reels-fill fs-1 text-dark" style="height: 100px;"></i>
+                        <h5 class="card-title mt-3">Accesorios</h5>
+                        <p class="card-text">Venta de Laptops</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates
+                                laborum quasi doloribus iure, non assumenda maxime consequuntur error explicabo!</p>
+                            </div>
+                        </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="tema bi bi-controller fs-1 text-dark" style="height: 100px;"></i>
+                        <h5 class="card-title mt-3">Accesorios</h5>
+                        <p class="card-text">Venta de Laptops</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates
+                                laborum quasi doloribus iure, non assumenda maxime consequuntur error explicabo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="tema bi bi-pc-display fs-1 text-dark" style="height: 100px;"></i>
+                                <h5 class="card-title mt-3">Accesorios</h5>
+                                <p class="card-text">Venta de Laptops</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates
+                            laborum quasi doloribus iure, non assumenda maxime consequuntur error explicabo!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LOGIN MODAL -->
+            <th:block th:replace="~{components/template :: modal1}"></th:block>
+            
+        </main>
+        
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

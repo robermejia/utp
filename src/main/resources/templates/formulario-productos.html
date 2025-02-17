@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Acerca')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container mt-5">
+        <section class="py-5 text-center">
+            <h1>Formulario de Nuevo Producto</h1>
+            <p class="lead">Añade un nuevo producto.</p>
+        </section>
+        
+        <!-- FORMULARIO PRODUCTOS -->
+        <th:block th:replace="~{components/template :: formulario_productos}"></th:block>  
+        
+        <section class="py-4">
+            <!-- Agrega más secciones según sea necesario -->
+        </section>
+        
+        <!-- LOGIN MODAL -->
+        <th:block th:replace="~{components/template :: modal1}"></th:block>  
+        
+    </main>
+    
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>
