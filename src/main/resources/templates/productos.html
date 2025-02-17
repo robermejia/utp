@@ -26,9 +26,13 @@
                         <img th:src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
                         <div class="card-body">
                             <h5 class="card-title" th:text="${producto.nombre}"></h5>
-                            <p class="card-text" th:text="${producto.precio}"></p>
-                            <a th:href="@{/productos/detalle/{id}(id=${producto.id})}" class="btn btn-primary">Ver
-                                Detalles</a>
+                            <p class="card-text">
+                                Precio: S./<span th:text="${producto.precio}"></span>
+                            </p>
+                            <p class="card-text">
+                                Stock: <span th:text="${producto.stock}"></span>
+                            </p>
+                            <a th:href="@{/productos/detalle/{id}(id=${producto.id})}" class="btn btn-dark">Ver Detalles</a>
                         </div>
                     </div>
                 </div>
