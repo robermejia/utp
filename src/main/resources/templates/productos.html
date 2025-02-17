@@ -21,7 +21,7 @@
         <!-- CARDS -->
         <div class="container mt-4">
             <div class="row mt-4">
-                <div th:each="producto : ${productos}" class="col-md-4 mb-4">
+                <div th:each="producto : ${productos}" class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card">
                         <img th:src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
                         <div class="card-body">
