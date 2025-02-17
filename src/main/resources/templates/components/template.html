@@ -197,19 +197,19 @@
                 <form th:action="@{/productos/editar}" th:object="${producto}" method="post">
                     <input type="hidden" th:field="*{id}">
                     <div class="mb-3">
-                        <label for="nombreProducto" class="form-label text-light">Nombre del Producto:</label>
+                        <label for="nombreProducto" class="form-label text-dark">Nombre del Producto:</label>
                         <input type="text" class="form-control border-yellow" id="nombreProducto" th:field="*{nombre}" required>
                     </div>
                     <div class="mb-3">
-                        <label for="urlImagen" class="form-label text-light">URL de la Imagen:</label>
+                        <label for="urlImagen" class="form-label text-dark">URL de la Imagen:</label>
                         <input type="text" class="form-control border-yellow" id="urlImagen" th:field="*{imagen}" required>
                     </div>
                     <div class="mb-3">
-                        <label for="precio" class="form-label text-light">Precio:</label>
+                        <label for="precio" class="form-label text-dark">Precio:</label>
                         <input type="number" class="form-control border-yellow" id="precio" th:field="*{precio}" required>
                     </div>
                     <div class="mb-3">
-                        <label for="stock" class="form-label text-light">Stock:</label>
+                        <label for="stock" class="form-label text-dark">Stock:</label>
                         <input type="number" class="form-control border-yellow" id="stock" th:field="*{stock}" step="0.01" required>
                     </div>
                     <div class="text-center">

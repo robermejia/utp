@@ -13,17 +13,17 @@
     
     <main class="container mt-5">
         <section class="py-5 text-center">
-            <h1>Formulario de Nuevo Producto</h1>
+            <h1>Edita el Producto</h1>
             <p class="lead">Añade un nuevo producto.</p>
         </section>
         
         <div th:if="${mensajeError != null}" class="alert alert-danger" role="alert">
-            <p th:text="${mensajeError}"></p>
+            <p class="text-dark" th:text="${mensajeError}"></p>
         </div>
 
         <div th:if="${fieldErrors != null}" class="alert alert-danger" role="alert">
             <th:block th:each="error : ${fieldErrors}">
-                <p th:text="${error.getField()} + ': ' + ${error.getDefaultMessage()}"></p>
+                <p class="text-dark" th:text="${error.getField()} + ': ' + ${error.getDefaultMessage()}"></p>
             </th:block>
         </div>
 
